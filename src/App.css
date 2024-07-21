@@ -1,0 +1,355 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.signup {
+    width: 100vw;
+    height: 100vh;
+    background-color: #df1111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup .signupCard {
+    width: 40%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border-radius: 15px;
+    color: #dadadac7;
+    justify-content: center;
+    box-shadow: 20px 20px 60px #be0e0e,
+        -20px -20px 60px #ff1414;
+}
+
+.signup .signupCard input {
+    width: 400px;
+    height: 40px;
+    background-color: #ccc;
+    padding-left: 10px;
+    border-radius: 7px;
+    border: none;
+}
+
+.signup .signupCard button {
+    width: 70px;
+    height: 40px;
+    background-color: yellow;
+    border-radius: 7px;
+    border: none;
+    transition: 0.1s;
+    cursor: pointer;
+    box-shadow: 0px 0px 7px 1px yellow;
+    font-weight: bold;
+}
+
+.signup .signupCard button:active {
+    transform: scale(0.9);
+}
+
+.signup .signupCard .error {
+    color: rgb(8, 8, 101);
+}
+
+/*&  Login  ----------------------------------------------------------------------- */
+.login {
+    width: 100vw;
+    height: 100vh;
+    background-color: #df1111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login .loginCard {
+    width: 40%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border-radius: 15px;
+    color: white;
+    justify-content: center;
+    box-shadow: 20px 20px 60px #be0e0e,
+        -20px -20px 60px #ff1414;
+}
+
+.login .loginCard input {
+    width: 400px;
+    height: 40px;
+    /* margin-top: 10px;
+    margin-bottom: 10px; */
+    padding-left: 10px;
+    border-radius: 7px;
+    /* border: 1px solid #ccc; */
+    border: none;
+}
+
+.login .loginCard button {
+    width: 70px;
+    height: 40px;
+    background-color: #fff700;
+    border-radius: 7px;
+    border: none;
+    transition: 0.1s;
+    cursor: pointer;
+    box-shadow: 0px 0px 7px 1px yellow;
+    font-weight: bold;
+}
+
+.login .loginCard button:active {
+    transform: scale(0.9);
+}
+
+.login .loginCard .error {
+    color: rgb(8, 8, 101);
+}
+
+
+
+.app {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ccc;
+    overflow-y: hidden;
+}
+
+.home {
+    /* background-color: #df1111; */
+    background-color: white;
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    /* overflow-y: scroll; */
+}
+
+.nav {
+    width: 20%;
+    height: 100vh;
+    flex-direction: column;
+    gap: 20px;
+    display: flex;
+    background-color: #a7a1a124;
+    align-items: center;
+    padding-top: 50px;
+    overflow-y: hidden;
+}
+.nav a{
+    width: 90%;
+    color:black;
+    text-decoration: none;
+    border: none;
+    box-shadow: 0px 0px 3px black;
+    border-radius: 9px;
+    text-align: center;
+    padding: 15px 15px;
+    background-color: white;
+    font-weight: bold;
+    transition: 0.1s;
+
+}
+.nav button{
+    width: 90%;
+    color:black;
+    border: none;
+    box-shadow: 0px 0px 3px black;
+    border-radius: 9px;
+    padding: 15px 15px;
+    background-color: white;
+    font-weight: bold;
+    transition: 0.1s;
+}
+.nav button:active{
+    transform: scale(0.94);
+}
+.nav a:active{
+    transform: scale(0.94);
+}
+
+/* & dashboard ------------------------- */
+
+.home .dashboard {
+    width: 80%;
+    height: 100%;
+    /* background-color: #df1111; */
+    background-color: #F8F8F8;
+
+
+
+}
+
+.dashboard .addtask {
+    width: 100%;
+    padding: 20px;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.addtask .inputSection {
+    display: flex;
+    gap: 20px;
+}
+
+.addtask input {
+    padding-left: 20px;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 2px black;
+    width: 250px;
+    height: 40px;
+
+}
+
+.addtask select {
+    padding-left: 20px;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 2px black;
+    width: 250px;
+    height: 40px;
+
+}
+
+.add select:focus {
+    border-color: #555;
+    outline: none;
+}
+
+.addtask select option {
+    box-shadow: 1px 1px 10px black;
+    border: none;
+    color: black;
+    padding: 20px;
+}
+
+.addtask button {
+    width: 70px;
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+    background-color: #1eb51e;
+    box-shadow: 1px 1px 2px black;
+    color: white;
+    font-weight: bold;
+    transition: 0.1s;
+}
+
+.addtask button:active {
+    transform: scale(0.9);
+}
+
+.taskList {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: 60%;
+    color: rgb(221, 221, 221);
+    overflow-y: scroll;
+    padding: 10px;
+
+}
+
+.taskList .expenses {
+    background-color: #F8F8F8;
+    /* background-color: red; */
+    color: black;
+    box-shadow: 1px 1px 3px black;
+    width: 200px;
+    height: 250px;
+    border-radius: 9px;
+    position: relative;
+
+}
+.taskList .expenses .categoryBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.taskList .expenses .categoryBox h4 {
+    background-color: #ff08bd;
+    color: white;
+    position: absolute;
+    top: -10px;
+    border-radius: 5px;
+    padding: 6px;
+
+}
+
+.taskList .expenses .box1 {
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+    gap: 6px;
+    height: 50%;
+    flex-direction: column;
+}
+
+.taskList .expenses .box1 .amount {
+    display: flex;
+    gap: 10px;
+}
+
+.taskList .expenses .box1 .amount h2 {
+    color: #5f5c5c;
+
+}
+
+.taskList .expenses .box2 {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.taskList .expenses .box2 .description {
+    width: 100%;
+    height: 80%;
+    overflow-wrap: break-word
+}
+
+.taskList .expenses .box2 .deleteButton {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 20%;
+}
+
+.taskList .expenses .box2 .deleteButton button {
+    border: none;
+    background-color: none;
+    background: transparent;
+    font-size: 25px;
+    color: red;
+}
+
+.taskList .expenses .box2 .deleteButton button:active {
+    transform: scale(0.9);
+}
+
+/* &------------------------------------ */
+.allExpenses{
+    width: 80vw;
+    height: 100vh;
+    /* background-color: red; */
+}
+.allExpenses .taskList{
+    height: 100vh;
+}
