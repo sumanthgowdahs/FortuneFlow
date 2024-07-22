@@ -10,14 +10,15 @@ function TaskList() {
     let { eid } = useParams()
 
     let dispatch = useDispatch()
-    if(userData.length == 0){
-        dispatch(AddMessage("Add new expeses"))
-    }
+    // if(userData.length == 0){
+    //     dispatch(AddMessage("Add new expeses"))
+    // }
    
 
     let apiFetch = async () => {
+        dispatch(AddMessage("Loading...."))
         let { data } = await axios.get(`http://localhost:5000/fortuneflow/getdata/${eid}`)
-        console.log(data)
+        // console.log(data)
         dispatch(fetchedData(data))
     }
     useEffect(() => {
@@ -27,20 +28,24 @@ function TaskList() {
     useEffect(() => {
         if (fetchData, fetchData.length > 0) {
             let reverseData = [...fetchData[0].data].reverse()
-            console.log(reverseData);
+            // console.log(reverseData);
             setUserData(reverseData)
         }
     }, [fetchData])
     // console.log(userData);
-    
     let deleteItem = async (id)=>{
-        dispatch(AddMessage("Loading..."))
-        console.log(id);
-        let {data} = await axios.post(`http://localhost:5000/fortuneflow/Removeexpense/${eid}/${id}`)
-       console.log(data);
-       dispatch(fetchedData(data))
-       dispatch(AddMessage("expense deleted"))
-
+        try {
+            dispatch(AddMessage("Loading..."))
+            console.log(id);
+            let {data} = await axios.post(`http://localhost:5000/fortuneflow/Removeexpense/${eid}/${id}`)
+        //    console.log(data);
+           dispatch(fetchedData(data))
+           dispatch(AddMessage("expense deleted"))
+        } 
+        catch (error) {
+            dispatch(AddMessage("network error"))
+        }
+       
     }
     
 

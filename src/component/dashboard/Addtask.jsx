@@ -28,6 +28,7 @@ function Addtask() {
 
 
     let fetch = async () => {
+        // dispatch(AddMessage("Loading...."))
         let userData = {
             name: nameRef.current.value,
             amount: amountRef.current.value,
@@ -50,6 +51,7 @@ function Addtask() {
             setError("expense added")
         }
         catch (error) {
+        
             dispatch(AddMessage(error.message))  
         }
     }
@@ -71,16 +73,16 @@ function Addtask() {
                 <input maxLength={60} placeholder='Description' ref={descriptionRef} type="text" />
                 <select  ref={categoryRef} id="taskOptions" name="taskOptions">
                     <option value="category">category</option>
-                    <option value="Housing">Housing</option>
-                    <option value="Transportation">Transportation</option>
-                    <option value="Food">Food</option>
-                    <option value="Personal">Personal care</option>
-                    <option value="Healthcare">Healthcare</option>
-                    <option value="Entertainment">Entertainment</option>
-                    <option value="Education">Education</option>
-                    <option value="Investments">Investments</option>
-                    <option value="Gifts">Gifts</option>
-                    <option value="Travel">Travel</option>
+                    <option value="housing">Housing</option>
+                    <option value="transportation">Transportation</option>
+                    <option value="food">Food</option>
+                    <option value="personal">Personal care</option>
+                    <option value="healthcare">Healthcare</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="education">Education</option>
+                    <option value="investments">Investments</option>
+                    <option value="gifts">Gifts</option>
+                    <option value="travel">Travel</option>
                 </select>
                 </div>
                 <button onClick={fetch}>Add</button>

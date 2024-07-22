@@ -6,6 +6,7 @@ import Login from './Login'
 import Dashboard from './component/dashboard/Dashboard'
 import './App.css'
 import AllExpenses from './component/AllExpenses'
+import Category from './component/Category'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='/home/:eid/' element={<Home/>}>
               <Route path='AllExpenses' element={<AllExpenses/>}/>
               <Route path='Dashboard' element={<Dashboard/>}/>
+              <Route path='Category' element={<Category/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

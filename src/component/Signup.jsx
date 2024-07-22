@@ -61,12 +61,13 @@ function Signup() {
     dispatch(AddMessage(response.data))     
     } 
     catch (error) {
-      // console.log(error.response.data);
-      // setError(error.response.data)
+    //  console.log(error);
     dispatch(AddMessage(error.response.data))     
 
     }  
   }
+  console.log(message);
+
 
   return (
     <div className='signup'>
@@ -77,7 +78,7 @@ function Signup() {
         <input ref={emailRef} placeholder='email' type="text" />
         <input ref={passwordRef} placeholder='password' type="password" />
         <input ref={confirmPasswordRef} placeholder='confirm password' type="password" />
-        <h4 className='error'>{message}</h4>
+        <h4 className='error'>{`${message}`}</h4>
         <button onClick={fetch}>Signup</button>
         <h5>Already have accound? <span className='Link'><Link  to="/login" >Login</Link></span> </h5>
         
