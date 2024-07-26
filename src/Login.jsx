@@ -37,7 +37,7 @@ function Login() {
             return
         }
         try {
-            let response = await axios.post("http://localhost:5000/fortuneflow/login", userData)
+            let response = await axios.post("https://fortuneflow.onrender.com/fortuneflow/login", userData)
             console.log(response);
             // dispatch(AddMessage("response.data"))
             navigate(`/home/${userData.email}/Dashboard`)

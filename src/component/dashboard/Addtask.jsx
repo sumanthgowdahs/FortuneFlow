@@ -45,7 +45,7 @@ function Addtask() {
         try {
             dispatch(AddMessage("Loading...."))
             setError("Loading.....")
-            let {data} = await axios.post(`http://localhost:5000/fortuneflow/addexpense/${eid}`, userData)
+            let {data} = await axios.post(`https://fortuneflow.onrender.com/fortuneflow/addexpense/${eid}`, userData)
             dispatch(fetchedData(data))
             dispatch(AddMessage("expense added"))
             setError("expense added")

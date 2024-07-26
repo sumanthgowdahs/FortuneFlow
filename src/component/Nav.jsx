@@ -10,7 +10,6 @@ function Nav() {
   let inputRef = useRef()
   let { eid } = useParams()
   let [filterValue, setFilterValue] = useState([])
-  // let [filter, setFilter] = useState([])
 
   let [category, setCategory] = useState()
   let filter = []
@@ -29,9 +28,8 @@ function Nav() {
     else {
       filter?.push(value)
     }
-    // setFilterValue(filter)
     console.log(filter);
-    let response = await axios.get(`http://localhost:5000/fortuneflow/filterdata/${eid}?filter={"catagary":"${filter}"}`)
+    let response = await axios.get(`https://fortuneflow.onrender.com/fortuneflow/filterdata/${eid}?filter={"catagary":"${filter}"}`)
     console.log(response);
     dispatch(AddCategory(response.data))
 
@@ -43,7 +41,6 @@ function Nav() {
       <Link to={`/home/${eid}/Allexpenses`}>All expenses</Link>
       <div className="catagories">
         <Link to={`/home/${eid}/Category`}>Category</Link>
-        {/* <h3 className='heading'>catagories</h3> */}
 
 
         <div className="catagoriesList">

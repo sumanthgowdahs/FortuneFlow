@@ -57,7 +57,7 @@ function Signup() {
     }
 
     try {
-      let response = await  axios.post("http://localhost:5000/fortuneflow/signup",userData)
+      let response = await  axios.post("https://fortuneflow.onrender.com/fortuneflow/signup",userData)
     dispatch(AddMessage(response.data))     
     } 
     catch (error) {

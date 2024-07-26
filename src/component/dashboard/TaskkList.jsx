@@ -17,7 +17,7 @@ function TaskList() {
 
     let apiFetch = async () => {
         dispatch(AddMessage("Loading...."))
-        let { data } = await axios.get(`http://localhost:5000/fortuneflow/getdata/${eid}`)
+        let { data } = await axios.get(`https://fortuneflow.onrender.com/fortuneflow/getdata/${eid}`)
         // console.log(data)
         dispatch(fetchedData(data))
     }
@@ -37,7 +37,7 @@ function TaskList() {
         try {
             dispatch(AddMessage("Loading..."))
             console.log(id);
-            let {data} = await axios.post(`http://localhost:5000/fortuneflow/Removeexpense/${eid}/${id}`)
+            let {data} = await axios.post(`https://fortuneflow.onrender.com/fortuneflow/Removeexpense/${eid}/${id}`)
         //    console.log(data);
            dispatch(fetchedData(data))
            dispatch(AddMessage("expense deleted"))
